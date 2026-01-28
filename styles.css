@@ -1,0 +1,44 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+.watermark-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.20;
+    pointer-events: none;
+    width: 60vw;
+    max-width: 800px;
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+.faq-item.active .faq-content {
+    max-height: 200px;
+    padding-bottom: 1.5rem;
+}
+.faq-item.active .plus-icon {
+    display: none;
+}
+.faq-item.active .minus-icon {
+    display: block;
+}
+.minus-icon {
+    display: none;
+}
+
+#carousel-next {
+    rotate: 180deg;
+}

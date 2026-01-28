@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlugTech | Assistência Técnica de Informática</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- Watermark -->
+    <div class="watermark-bg select-none">
+        <svg viewBox="0 0 400 200" fill="currentColor" class="text-[#0379BE]">
+            <path d="M50,100 Q50,40 100,40 L150,40 Q200,40 200,100 Q200,160 150,160 L100,160 Q50,160 50,100 Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <text x="75" y="115" font-size="40" font-weight="bold">PlugTech</text>
+        </svg>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#0379BE] p-1.5 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                </div>
+                <span class="text-2xl font-bold text-[#0379BE] tracking-tight">PlugTech</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-slate-600 hover:text-[#0379BE] font-medium transition-colors">Início</a>
+                <a href="services.html" class="text-slate-600 hover:text-[#0379BE] font-medium transition-colors">Serviços</a>
+                <a href="products.html" class="text-slate-600 hover:text-[#0379BE] font-medium transition-colors">Produtos</a>
+                <a href="https://wa.me/5500000000000" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-5 py-2.5 rounded-full flex items-center gap-2 font-semibold shadow-lg shadow-green-500/20 transition-all active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-800">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-slate-100 flex flex-col p-4 gap-4 md:hidden">
+            <a href="#inicio" class="mobile-link text-lg font-medium text-slate-700 p-2 hover:bg-slate-50 rounded">Início</a>
+            <a href="#servicos" class="mobile-link text-lg font-medium text-slate-700 p-2 hover:bg-slate-50 rounded">Serviços</a>
+            <a href="#produtos" class="mobile-link text-lg font-medium text-slate-700 p-2 hover:bg-slate-50 rounded">Produtos</a>
+            <a href="https://wa.me/5500000000000" class="bg-[#25D366] text-white p-4 rounded-xl flex justify-center items-center gap-2 font-bold">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=1920" alt="Computer hardware repair" class="w-full h-full object-cover opacity-10" />
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-blue-50 text-[#0379BE] px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-blue-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    Tecnologia com Confiança
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Assistência técnica de <span class="text-[#0379BE]">informática</span> de alta performance.
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Reparos especializados em notebooks, desktops e servidores. Soluções rápidas, profissionais e com garantia total para você e sua empresa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="bg-[#D01F15] hover:bg-[#b01a12] text-white text-lg font-bold px-8 py-4 rounded-xl shadow-xl shadow-red-500/30 flex items-center justify-center gap-2 transition-all active:scale-95">
+                        Fale com um Atendente
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="#servicos" class="bg-white border-2 border-slate-200 hover:border-[#0379BE] hover:text-[#0379BE] text-slate-700 text-lg font-bold px-8 py-4 rounded-xl flex items-center justify-center transition-all">
+                        Ver Serviços
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[70%]">
+            <div class="relative w-full h-full">
+                <img src="https://images.unsplash.com/photo-1604754742629-3e5728249d73?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover rounded-l-[100px] shadow-2xl" alt="Professional Repair" />
+                <div class="absolute -left-12 bottom-12 bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 flex items-center gap-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-bold uppercase tracking-wider">Tempo Médio</p>
+                        <p class="text-xl font-extrabold text-slate-900">Reparo em 24h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="servicos" class="py-24 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[#0379BE] font-bold tracking-widest uppercase text-sm mb-4">Nossa Especialidade</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900">Serviços Profissionais</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-[#0379BE] w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Reparo de Hardware</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">Diagnóstico e troca de componentes como telas, teclados, baterias e placas-mãe de notebooks e desktops.</p>
+                    <a href="#contato" class="text-[#0379BE] font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Saiba mais <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-[#0379BE] w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Limpeza e Manutenção</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">Preventiva e corretiva com troca de pasta térmica de alta qualidade e limpeza interna completa de resíduos.</p>
+                    <a href="#contato" class="text-[#0379BE] font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Saiba mais <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="bg-[#0379BE] w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Redes e Servidores</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">Configuração de rede Wi-Fi, cabeamento estruturado e manutenção de servidores empresariais corporativos.</p>
+                    <a href="#contato" class="text-[#0379BE] font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Saiba mais <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="produtos" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-[#0379BE] font-bold tracking-widest uppercase text-sm mb-4">Loja</h2>
+                    <h3 class="text-4xl font-extrabold text-slate-900">Produtos em Destaque</h3>
+                </div>
+                <div class="flex gap-2">
+                    <button id="carousel-prev" class="p-3 rounded-full border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button id="carousel-next" class="p-3 rounded-full border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" transform="rotate(180 12 12)"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="product-carousel" class="flex gap-6 overflow-x-auto pb-8 hide-scrollbar snap-x">
+                <!-- Product 1 -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden snap-start group transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1628557118391-56cd62c9f2cb?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SSD" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-[#0379BE] shadow-sm">Novo</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">SSD Externo Samsung</h4>
+                        <p class="text-slate-500 text-sm mb-4">Aumente a velocidade do seu PC em até 10x.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-black text-[#0379BE]">R$ 289,00</span>
+                            <button class="bg-slate-100 hover:bg-[#D01F15] hover:text-white text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-colors">Conferir</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden snap-start group transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1654240253461-3f51c793b366?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="RAM" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">Memória RAM 8GB DDR3</h4>
+                        <p class="text-slate-500 text-sm mb-4">Ideal para multitarefa e desempenho fluido.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-black text-[#0379BE]">R$ 195,00</span>
+                            <button class="bg-slate-100 hover:bg-[#D01F15] hover:text-white text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-colors">Conferir</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden snap-start group transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=400" alt="Notebook" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-[#0379BE] shadow-sm">Oferta</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">Notebook Dell Inspiron</h4>
+                        <p class="text-slate-500 text-sm mb-4">Processador i5, 8GB RAM, SSD 256GB.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-black text-[#0379BE]">R$ 3.490,00</span>
+                            <button class="bg-slate-100 hover:bg-[#D01F15] hover:text-white text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-colors">Conferir</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="min-w-[280px] md:min-w-[320px] bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden snap-start group transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=400" alt="Keyboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-slate-900 mb-1">Teclado Sem Fio Branco</h4>
+                        <p class="text-slate-500 text-sm mb-4">Design moderno e minimalista.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-black text-[#0379BE]">R$ 349,00</span>
+                            <button class="bg-slate-100 hover:bg-[#D01F15] hover:text-white text-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-colors">Conferir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section id="diferenciais" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#0379BE] opacity-20 blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-[#0379BE] font-bold tracking-widest uppercase text-sm mb-4">Por que nós?</h2>
+                <h3 class="text-4xl font-extrabold">Diferenciais que nos tornam líderes</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Item 1 -->
+                <div class="text-center group">
+                    <div class="mb-6 inline-flex p-5 rounded-3xl bg-slate-800 text-[#0379BE] group-hover:bg-[#0379BE] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Entrega no Prazo</h4>
+                    <p class="text-slate-400 leading-relaxed max-w-xs mx-auto">Compromisso rigoroso com os prazos estabelecidos no orçamento inicial.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="text-center group">
+                    <div class="mb-6 inline-flex p-5 rounded-3xl bg-slate-800 text-[#0379BE] group-hover:bg-[#0379BE] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Profissionais Qualificados</h4>
+                    <p class="text-slate-400 leading-relaxed max-w-xs mx-auto">Técnicos certificados com anos de experiência no mercado de TI.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="text-center group">
+                    <div class="mb-6 inline-flex p-5 rounded-3xl bg-slate-800 text-[#0379BE] group-hover:bg-[#0379BE] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">Garantia Total</h4>
+                    <p class="text-slate-400 leading-relaxed max-w-xs mx-auto">Todos os nossos serviços contam com garantia de até 90 dias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[#0379BE] font-bold tracking-widest uppercase text-sm mb-4">Feedback</h2>
+                <h3 class="text-4xl font-extrabold text-slate-900">O que nossos clientes dizem</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl relative">
+                    <div class="text-[#0379BE] text-6xl font-serif absolute top-4 left-6 opacity-20">"</div>
+                    <p class="text-slate-600 mb-8 relative z-10 italic">"A PlugTech resolveu o problema do meu servidor em tempo recorde. Altamente profissionais!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[#0379BE] rounded-full flex items-center justify-center text-white font-bold">C</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Carlos Oliveira</p>
+                            <p class="text-xs text-slate-500 font-medium">Empresário</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl relative">
+                    <div class="text-[#0379BE] text-6xl font-serif absolute top-4 left-6 opacity-20">"</div>
+                    <p class="text-slate-600 mb-8 relative z-10 italic">"Limpeza de notebook impecável. O computador está voando de novo. Recomendo demais!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[#0379BE] rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Maria Fernanda</p>
+                            <p class="text-xs text-slate-500 font-medium">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl relative">
+                    <div class="text-[#0379BE] text-6xl font-serif absolute top-4 left-6 opacity-20">"</div>
+                    <p class="text-slate-600 mb-8 relative z-10 italic">"Melhor assistência técnica da região. Transparência total no orçamento e peças originais."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-[#0379BE] rounded-full flex items-center justify-center text-white font-bold">R</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Roberto Silva</p>
+                            <p class="text-xs text-slate-500 font-medium">Desenvolvedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[#0379BE] font-bold tracking-widest uppercase text-sm mb-4">FAQ</h2>
+                <h3 class="text-4xl font-extrabold text-slate-900">Perguntas Frequentes</h3>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 cursor-pointer">
+                    <div class="faq-trigger w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-slate-800 text-lg">Qual o prazo médio de um reparo?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] plus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] minus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                    </div>
+                    <div class="faq-content px-6">
+                        <p class="text-slate-600 leading-relaxed">A maioria dos reparos é concluída em até 24h ou 48h úteis, dependendo da disponibilidade de peças.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 cursor-pointer">
+                    <div class="faq-trigger w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-slate-800 text-lg">Vocês dão garantia nos serviços?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] plus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] minus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                    </div>
+                    <div class="faq-content px-6">
+                        <p class="text-slate-600 leading-relaxed">Sim! Oferecemos garantia total de 90 dias em todos os serviços de mão de obra e peças substituídas.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 cursor-pointer">
+                    <div class="faq-trigger w-full p-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span class="font-bold text-slate-800 text-lg">Fazem orçamento gratuito?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] plus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] minus-icon w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                    </div>
+                    <div class="faq-content px-6">
+                        <p class="text-slate-600 leading-relaxed">Sim, realizamos o diagnóstico inicial sem custo para a maioria dos casos de hardware padrão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-slate-900 rounded-[40px] p-8 md:p-16 overflow-hidden relative">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover" alt="Circuit board" />
+                </div>
+                
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-white text-4xl md:text-5xl font-extrabold mb-8">Vamos consertar seu computador hoje?</h3>
+                        <p class="text-slate-400 text-xl mb-12">Nossa equipe está pronta para te atender. Mande uma mensagem e receba seu orçamento em minutos.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 text-white">
+                                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-[#0379BE]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <span class="text-lg font-medium">(11) 99999-9999</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-white">
+                                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-[#0379BE]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <span class="text-lg font-medium">contato@plugtech.com.br</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-white">
+                                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-[#0379BE]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <span class="text-lg font-medium">Rua da Tecnologia, 123 - Centro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl">
+                        <h4 class="text-2xl font-bold text-slate-900 mb-6">Envie uma mensagem</h4>
+                        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Nome Completo</label>
+                                <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#0379BE] transition-all" placeholder="Seu nome..." required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Seu WhatsApp</label>
+                                <input type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#0379BE] transition-all" placeholder="(00) 00000-0000" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Qual o problema?</label>
+                                <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#0379BE] transition-all" placeholder="Descreva brevemente o que aconteceu..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#D01F15] hover:bg-[#b01a12] text-white font-extrabold py-4 rounded-xl shadow-lg shadow-red-500/20 transition-all active:scale-95">
+                                Enviar Orçamento Grátis
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-16 pt-24 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-[#0379BE] w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+                        <span class="text-2xl font-bold text-white tracking-tight">PlugTech</span>
+                    </div>
+                    <p class="max-w-sm mb-8">
+                        Referência em assistência técnica e soluções de TI com foco em agilidade, transparência e satisfação total do cliente.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-slate-900 hover:bg-[#0379BE] hover:text-white rounded-full flex items-center justify-center transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-900 hover:bg-[#0379BE] hover:text-white rounded-full flex items-center justify-center transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-6">Links Rápidos</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#inicio" class="hover:text-[#0379BE] transition-colors">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-[#0379BE] transition-colors">Serviços</a></li>
+                        <li><a href="#produtos" class="hover:text-[#0379BE] transition-colors">Produtos</a></li>
+                        <li><a href="#contato" class="hover:text-[#0379BE] transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-6">Legal</h5>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-[#0379BE] transition-colors">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-[#0379BE] transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-[#0379BE] transition-colors">Garantia</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2024 PlugTech Assistência Técnica. Todos os direitos reservados.</p>
+                <p>Design de Elite por PlugTech.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
